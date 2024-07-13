@@ -29,17 +29,19 @@ https://www.aliexpress.com/item/4000146595503.html?spm=a2g0o.order_list.order_li
 https://sigrok.org/wiki/Downloads#Binaries_and_distribution_packages
 
 ```bash
-wget https://sigrok.org/download/binary/sigrok-cli/sigrok-cli-NIGHTLY-x86_64.AppImage
-wget https://sigrok.org/download/binary/pulseview/PulseView-NIGHTLY-x86_64.AppImage
-chmod a+x *.AppImage
-sudo ./PulseView-NIGHTLY-x86_64.AppImage
+wget https://sigrok.org/download/binary/sigrok-cli/sigrok-cli-NIGHTLY-x86_64-release.appimage
+wget https://sigrok.org/download/binary/sigrok-cli/sigrok-cli-NIGHTLY-x86_64-debug.appimage
+wget https://sigrok.org/download/binary/pulseview/pulseview-NIGHTLY-x86_64-release.appimage
+wget https://sigrok.org/download/binary/pulseview/pulseview-NIGHTLY-x86_64-debug.appimage
+chmod a+x *.appImage
+sudo ./pulseview-NIGHTLY-x86_64-debug.appimage
 ```
 
 ![](screenshots/select_device.png)
 
 
 ```bash
-sudo ./sigrok-cli-NIGHTLY-x86_64.AppImage --scan
+sudo ./sigrok-cli-NIGHTLY-x86_64-debug.appimage --scan
 The following devices were found:
 demo - Demo device with 13 channels: D0 D1 D2 D3 D4 D5 D6 D7 A0 A1 A2 A3 A4
 fx2lafw - Saleae Logic with 8 channels: D0 D1 D2 D3 D4 D5 D6 D7
