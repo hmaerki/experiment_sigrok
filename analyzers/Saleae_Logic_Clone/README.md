@@ -3,16 +3,16 @@
 ## Links
 ### sigrok
 
-https://sigrok.org/wiki/MCU123_Saleae_Logic_clone
-https://sigrok.org/wiki/Noname_Saleae_Logic_clone
-https://sigrok.org/wiki/Saleae_Logic/Info
-https://sigrok.org/bugzilla/show_bug.cgi?id=1152
+* https://sigrok.org/wiki/MCU123_Saleae_Logic_clone
+* https://sigrok.org/wiki/Noname_Saleae_Logic_clone
+* https://sigrok.org/wiki/Saleae_Logic/Info
+* https://sigrok.org/bugzilla/show_bug.cgi?id=1152
 
 ## Aliexpress
 
 USB Logic Analyzer 24MHz 8 Channel 24M/seconds Logic Analyzer Debugger For ARM FPGA Logic Analyzer Logic 24M 8CH
 
-https://www.aliexpress.com/item/4000146595503.html?spm=a2g0o.order_list.order_list_main.35.650a1802zbydsM
+https://www.aliexpress.com/item/4000146595503.html
 
 ### CPU `Infineon CY7C68013A-56`
 
