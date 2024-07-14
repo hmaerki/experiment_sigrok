@@ -37,21 +37,16 @@ Now use PluseView, select CH1 and decode UART 9600buad
 * Nice examples: https://sigrok.org/wiki/Getting_started_with_a_logic_analyzer
 * https://sigrok.org/wiki/Sigrok-cli
 
-```bash
-sudo ./sigrok-cli-NIGHTLY-x86_64-release.appimage --driver fx2lafw --config samplerate=1m --channels D0,D1 --protocol-decoders uart:rx=D0:baudrate=9600:parity=none:sample_point=5:format=ascii --protocol-decoder-annotations uart=rx_data --triggers D0=f
---wait-trigger
---continuous
-```
+### Using 9600 baud
 
 ```bash
-sudo ./sigrok-cli-NIGHTLY-x86_64-release.appimage --driver fx2lafw --config samplerate=1m --channels D0,D1 --protocol-decoders uart:rx=D0:baudrate=9600:parity=none:sample_point=50:format=ascii --protocol-decoder-annotations uart=rx_data --triggers D0=f --time=1s --wait-trigger
+sudo ./sigrok-cli-NIGHTLY-x86_64-release.appimage --driver fx2lafw --config samplerate=1m --config captureratio=10 --channels D0,D1 --protocol-decoders uart:rx=D0:baudrate=9600:parity=none:sample_point=50:format=ascii --protocol-decoder-annotations uart=rx_data --triggers D0=f --time=1s
 
 Second terminal:
-(echo x; sleep 0.1; echo hallo) > /dev/ttyUSB0 
+sudo stty -F /dev/ttyUSB0 9600
+echo hallo > /dev/ttyUSB0 
 
 Output in first terminal:
-uart-1: 5
-uart-1: [0A]
 uart-1: h
 uart-1: a
 uart-1: l
@@ -61,8 +56,12 @@ uart-1: [0D]
 uart-1: [0A]
 ```
 
-Sample point (CAN), see: https://sigrok.org/gitweb/?p=libsigrokdecode.git;a=blob_plain;f=decoders/can/pd.py;hb=HEAD
-  `{'id': 'sample_point', 'desc': 'Sample point (%)', 'default': 70.0},`
+### Using 115200 baud
 
-Sample point (UART), see: https://sigrok.org/gitweb/?p=libsigrokdecode.git;a=blob_plain;f=decoders/uart/pd.py;hb=HEAD
-  `{'id': 'sample_point', 'desc': 'Sample point (%)', 'default': 50},`
+```bash
+sudo ./sigrok-cli-NIGHTLY-x86_64-release.appimage --driver fx2lafw --config samplerate=24m --config captureratio=10 --channels D0,D1 --protocol-decoders uart:rx=D0:baudrate=115200:parity=none:sample_point=50:format=ascii --protocol-decoder-annotations uart=rx_data --triggers D0=f --time=1s
+
+Second terminal:
+sudo stty -F /dev/ttyUSB0 115200
+echo hallo > /dev/ttyUSB0 
+```
