@@ -14,6 +14,10 @@ USB Logic Analyzer 24MHz 8 Channel 24M/seconds Logic Analyzer Debugger For ARM F
 
 https://www.aliexpress.com/item/4000146595503.html
 
+## seengreat.com
+
+https://seengreat.com/product/249/mini-logic-analyzer-board
+
 ### CPU `Infineon CY7C68013A-56`
 
 ![](images_hans/IMG_0529.HEIC_chip.jpg)
